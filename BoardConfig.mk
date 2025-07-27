@@ -145,6 +145,8 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TW_INCLUDE_CRYPTO := true
 TW_FORCE_KEYMASTER_VER := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 #PBRP specific
 PB_TORCH_PATH := "/sys/devices/virtual/camera/flash/rear_flash"
