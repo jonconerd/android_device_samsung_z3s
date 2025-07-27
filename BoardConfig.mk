@@ -48,6 +48,7 @@ BOARD_MKBOOTIMG_ARGS := \
     --header_version 2
 
 BOARD_ROOT_EXTRA_FOLDERS := \
+    metadata \
     carrier \
     data_mirror \
     efs \
