@@ -6,6 +6,8 @@
 #
 
 # For building with minimal manifest
+export FOX_BUILD_DEVICE=z3s
+export LC_ALL="C"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 export FOX_VANILLA_BUILD=1
