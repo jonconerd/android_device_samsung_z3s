@@ -14,7 +14,14 @@
 #
 
 mkdir -p "/tmp/vendor";
-mount -o ro "/dev/block/mapper/vendor" "/tmp/vendor";
+mount -t ext4 -o ro "/dev/block/mapper/vendor" "/tmp/vendor" 2> /dev/null;
+
+if [ $? -ne 0 ]; then
+      # Mounting as EXT4 failed, that must mean that we're on an EroFS vendor
+      # And EroFS doesn't need read-only specified, it's naturally read-only
+      echo "I:postrecoveryboot: EXT4 mount failed! Mounting as EroFS." >> /tmp/recovery.log;
+      mount -t erofs "/dev/block/mapper/vendor" "/tmp/vendor";
+fi
 
 if [ -f "/tmp/vendor/bin/install-recovery.sh" ]; then
   BOOT_HASH=$(sha1sum "/dev/block/by-name/boot" | cut -d ' ' -f 1);
