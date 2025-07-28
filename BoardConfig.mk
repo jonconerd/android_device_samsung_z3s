@@ -122,7 +122,6 @@ TW_DEFAULT_BRIGHTNESS := 12800
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone7/temp"
 TW_Y_OFFSET := 100
 TW_H_OFFSET := -100
-TW_HAS_MTP := true
 TW_USE_SAMSUNG_HAPTICS := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
@@ -144,6 +143,8 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TW_INCLUDE_CRYPTO := true
 TW_FORCE_KEYMASTER_VER := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_INCLUDE_CRYPTO_FBE := true
 
 #PBRP specific
 PB_TORCH_PATH := "/sys/devices/virtual/camera/flash/rear_flash"
