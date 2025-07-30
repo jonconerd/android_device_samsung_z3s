@@ -11,6 +11,7 @@ ro.crypto.allow_encrypt_override=true
 
 # Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
 # Call deleteAllKeys if vold detects a factory reset
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 
