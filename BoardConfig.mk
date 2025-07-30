@@ -48,7 +48,6 @@ BOARD_MKBOOTIMG_ARGS := \
     --header_version 2
 
 BOARD_ROOT_EXTRA_FOLDERS := \
-    metadata \
     carrier \
     data_mirror \
     efs \
@@ -143,6 +142,7 @@ TW_INCLUDE_CRYPTO := true
 TW_FORCE_KEYMASTER_VER := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_INCLUDE_CRYPTO_FBE := true
+TW_PREPARE_DATA_MEDIA_EARLY := true
 
 #PBRP specific
 PB_TORCH_PATH := "/sys/devices/virtual/camera/flash/rear_flash"
