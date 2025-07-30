@@ -2,10 +2,12 @@
 ro.twrp.ext.v2=1
 
 # Crypto
+ro.hardware.gatekeeper=mdfpp
 ro.security.keystore.keytype=sakv2,gak,sgak
 ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.allow_encrypt_override=true
 
 # Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
